@@ -71,11 +71,7 @@ input[type="file"] {
   color: black;
   border: none;
 }
-  .container {
-    display: flex;
-    justify-content: space-between; /* Optional: Adds space between the buttons */
-  }
-
+ 
   .button {
     width: 200px; /* Same width for all buttons */
     height: 50px; /* Same height for all buttons */
@@ -91,13 +87,25 @@ input[type="file"] {
     background-color: rgba(0, 123, 255, 1); /* Darker color on hover */
   }
 
-  .box {
-    width: 200px; /* Adjust the width as needed */
-    height: 2000px; /* Optional: You can set a height for better visibility */
-  
-  
- 
-  }
+ .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px;
+            gap: 10px;
+            width: 200px; /* Set fixed width for the container */
+            margin: 0 auto; /* Center it horizontally */
+        }
+        .box {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%; /* Ensure box takes up the full width of the container */
+            text-align: center;
+        }
+     
 
    
   </style>
