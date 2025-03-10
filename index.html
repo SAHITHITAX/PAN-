@@ -98,12 +98,39 @@ input[type="file"] {
   
  
   }
+   /* Top Bar Styles */
+        .top-bar {
+            background-color: rgba(0, 128, 0, 0.8); /* Greenish transparent background */
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 16px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000; /* Keeps it on top of other content */
+        }
+        .top-bar a {
+            color: white;
+            text-decoration: none;
+            margin-left: 15px;
+        }
+        .top-bar a:hover {
+            text-decoration: underline;
+        }
 
+      
    
   </style>
 </head>
 <body>
-
+ <!-- Top Bar with Information -->
+    <div class="top-bar">
+        <span>Important Notice: Payment is mandatory before submission!</span>
+        <a href="mailto:contact@taxservices.com">Contact Us</a> |
+        <a href="https://example.com/privacy-policy">Privacy Policy</a>
+    </div>
   <!-- Welcome Section -->
   <div id="welcomeSection">
     <h1>Welcome to Sahithi Tax Consultancy</h1>
