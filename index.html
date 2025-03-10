@@ -71,6 +71,24 @@ input[type="file"] {
   color: black;
   border: none;
 }
+   .container {
+    display: flex;
+    justify-content: space-between; /* Optional: Adds space between the divs */
+  }
+  .box {
+    width: 300px; /* Adjust the width as needed */
+    height: 200px; /* Optional: You can set a height for better visibility */
+  }
+  .left-div {
+    background-color: lightblue;
+  }
+  .middle-div {
+    background-color: lightgreen;
+  }
+  .right-div {
+    background-color: lightcoral;
+  }
+   
   </style>
 </head>
 <body>
@@ -81,8 +99,9 @@ input[type="file"] {
     <p>We provide expert tax consultation services. Apply for a new PAN with ease!</p>
   </div>
   
-    
-    <div  style="width: 250px; margin-left: 0; margin-right: auto;"> 
+    <div class="container">
+ 
+    <div   class="left-div box"> 
       <button onclick="window.location.href='https://script.google.com/macros/s/AKfycbxtiyDxp4Rxpq-E97FyCqtjI-O5QYwq6D_gxh1h_4pPN9-PddfVMFzDM8nV28enYJ3I5A/exec';">
   Apply for New PAN
 </button>
@@ -97,7 +116,7 @@ input[type="file"] {
 </button>
 </div>
 
-  <div  style="width: 250px; margin-left: 0; margin-right: auto;"> 
+  <div  class="middle-div box"> 
       <button onclick="window.location.href='https://script.google.com/macros/s/AKfycbxtiyDxp4Rxpq-E97FyCqtjI-O5QYwq6D_gxh1h_4pPN9-PddfVMFzDM8nV28enYJ3I5A/exec';">
   Apply for New PAN
 </button>
@@ -111,6 +130,21 @@ input[type="file"] {
  ITR FILING
 </button>
 </div>
+ <div  class="right-div box"> 
+      <button onclick="window.location.href='https://script.google.com/macros/s/AKfycbxtiyDxp4Rxpq-E97FyCqtjI-O5QYwq6D_gxh1h_4pPN9-PddfVMFzDM8nV28enYJ3I5A/exec';">
+  Apply for New PAN
+</button>
+  <button onclick="window.location.href='https://script.google.com/macros/s/AKfycbxVztiPl7npPEWUH3oF8_uAEDjECTrrL1ahfX5du4Jl4TpIZvE9WgD0kXe7vBqhoba2kg/exec';">
+  Apply for  PAN Correction
+</button>
+  <button onclick="window.location.href='';">
+  Apply for  TAN
+</button>
+  <button onclick="window.location.href='';">
+ ITR FILING
+</button>
+</div>
+    </div>
   <script>
 
   </script>
