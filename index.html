@@ -98,19 +98,21 @@ input[type="file"] {
   
  
   }
-   /* Top Bar Styles */
-    .top-bar {
-        background-color: #e8f5e9; /* Green background */
-        color: black; /* White text */
-        padding: ;
-        border-radius: 0; /* No rounded corners */
-        width: 100%; /* Full width */
-        box-sizing: border-box; /* Includes padding in width calculation */
-        display: flex;
-        justify-content: space-between;
-        align-items: ;
-    }
 
+     /* Top Bar Styles */
+        .top-bar {
+            background-color: #e8f5e9; /* Greenish transparent background */
+            color: black;
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 16px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000; /* Keeps it on top of other content */
+        }
+   
    
         .top-bar a {
             color: white;
