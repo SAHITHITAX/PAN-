@@ -1,233 +1,377 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PAN Card Services</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #e74c3c;
-            --accent-color: #3498db;
-            --light-color: #ecf0f1;
-            --dark-color: #2c3e50;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
-        body {
-            background-color: #f5f7fa;
-            color: var(--dark-color);
-            line-height: 1.6;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        
-        header {
-            background: linear-gradient(135deg, var(--primary-color), var(--dark-color));
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-            border-radius: 0 0 10px 10px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            margin-bottom: 30px;
-        }
-        
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
-        
-        header p {
-            font-size: 1.1rem;
-            opacity: 0.9;
-        }
-        
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin-bottom: 40px;
-        }
-        
-        .service-card {
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-        }
-        
-        .card-icon {
-            background: var(--accent-color);
-            color: white;
-            padding: 25px;
-            text-align: center;
-            font-size: 2.5rem;
-        }
-        
-        .card-content {
-            padding: 25px;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .card-content h3 {
-            margin-bottom: 15px;
-            color: var(--primary-color);
-            font-size: 1.5rem;
-        }
-        
-        .card-content p {
-            margin-bottom: 20px;
-            color: #555;
-            flex-grow: 1;
-        }
-        
-        .btn {
-            display: inline-block;
-            padding: 12px 25px;
-            background: var(--secondary-color);
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: 600;
-            text-align: center;
-            transition: background 0.3s ease;
-            border: none;
-            cursor: pointer;
-            align-self: flex-start;
-        }
-        
-        .btn:hover {
-            background: #c0392b;
-        }
-        
-        .info-section {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            margin-bottom: 30px;
-        }
-        
-        .info-section h2 {
-            color: var(--primary-color);
-            margin-bottom: 20px;
-            font-size: 1.8rem;
-        }
-        
-        footer {
-            background: var(--dark-color);
-            color: white;
-            text-align: center;
-            padding: 20px;
-            border-radius: 10px 10px 0 0;
-        }
-        
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2rem;
-            }
-            
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .btn {
-                width: 100%;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PAN Card Services</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    :root {
+      --primary-color: #2c3e50;
+      --secondary-color: #e74c3c;
+      --accent-color: #3498db;
+      --light-color: #ecf0f1;
+      --dark-color: #2c3e50;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #f5f7fa;
+      color: var(--dark-color);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--primary-color), var(--dark-color));
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      border-radius: 0 0 10px 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      margin-bottom: 30px;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-bottom: 40px;
+    }
+
+    .service-card {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .card-icon {
+      background: var(--accent-color);
+      color: white;
+      padding: 25px;
+      text-align: center;
+      font-size: 2.5rem;
+    }
+
+    .card-content {
+      padding: 25px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-content h3 {
+      margin-bottom: 15px;
+      color: var(--primary-color);
+      font-size: 1.5rem;
+    }
+
+    .card-content p {
+      margin-bottom: 20px;
+      color: #555;
+      flex-grow: 1;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      background: var(--secondary-color);
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: 600;
+      text-align: center;
+      transition: background 0.3s ease;
+      border: none;
+      cursor: pointer;
+      align-self: flex-start;
+    }
+
+    .btn:hover {
+      background: #c0392b;
+    }
+
+    .info-section {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      margin-bottom: 30px;
+    }
+
+    .info-section h2 {
+      color: var(--primary-color);
+      margin-bottom: 20px;
+      font-size: 1.8rem;
+    }
+
+    footer {
+      background: var(--dark-color);
+      color: white;
+      text-align: center;
+      padding: 20px;
+      border-radius: 10px 10px 0 0;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .btn {
+        width: 100%;
+      }
+    }
+
+    /* Overlay Styles */
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(44, 62, 80, 0.95);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+      padding: 40px 20px;
+      overflow-y: auto;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .expanded-box {
+      background: white;
+      border-radius: 15px;
+      padding: 30px;
+      max-width: 1000px;
+      width: 100%;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+      animation: zoomIn 0.4s ease;
+    }
+
+    @keyframes zoomIn {
+      from {
+        transform: scale(0.9);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    .branch-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-top: 25px;
+    }
+
+    .branch-card {
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .branch-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .close-btn {
+      margin-top: 30px;
+      padding: 10px 20px;
+      background: var(--secondary-color);
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: 600;
+      float: right;
+      transition: background 0.3s ease;
+    }
+
+    .close-btn:hover {
+      background: #c0392b;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>PAN Card Services</h1>
-            <p>Manage your PAN card applications and corrections with ease</p>
-        </div>
-    </header>
-    
+  <header>
     <div class="container">
-        <div class="services-grid">
-            <!-- New PAN Card -->
-            <div class="service-card">
-                <div class="card-icon">
-                    <i class="fas fa-id-card"></i>
-                </div>
-                <div class="card-content">
-                    <h3>New PAN Card</h3>
-                    <p>Apply for a brand new Permanent Account Number (PAN) card if you don't have one. Required for financial transactions and tax purposes.</p>
-                    <a href="https://script.google.com/macros/s/AKfycbzv5FWV_sR8M1cMLfqGLIc9eh8ZzNuVGEAysFBvvU-L_YV0AQI8x7mQR48bsPetq46xnA/exec" class="btn">Apply Now</a>
-                </div>
-            </div>
-            
-            <!-- PAN Correction -->
-            <div class="service-card">
-                <div class="card-icon">
-                    <i class="fas fa-edit"></i>
-                </div>
-                <div class="card-content">
-                    <h3>PAN Correction</h3>
-                    <p>Request changes or corrections to your existing PAN card details like name, date of birth, address or other information.</p>
-                    <a href="#" class="btn">Request Changes</a>
-                </div>
-            </div>
-            
-            <!-- PAN Reprint -->
-            <div class="service-card">
-                <div class="card-icon">
-                    <i class="fas fa-print"></i>
-                </div>
-                <div class="card-content">
-                    <h3>PAN Reprint</h3>
-                    <p>Get a reprinted copy of your existing PAN card if your original is damaged, faded or needs to be replaced for any reason.</p>
-                    <a href="#" class="btn">Request Reprint</a>
-                </div>
-            </div>
-            
-            <!-- Lost PAN Card -->
-            <div class="service-card">
-                <div class="card-icon">
-                    <i class="fas fa-search"></i>
-                </div>
-                <div class="card-content">
-                    <h3>Lost PAN Card</h3>
-                    <p>Report a lost or stolen PAN card and apply for a duplicate. Protect yourself from potential misuse of your PAN information.</p>
-                    <a href="#" class="btn">Report & Replace</a>
-                </div>
-            </div>
-        </div>
-        
-        <div class="info-section">
-            <h2>About PAN Card Services</h2>
-            <p>The Permanent Account Number (PAN) is a 10-digit alphanumeric identifier issued by the Income Tax Department of India. PAN is mandatory for various financial transactions and serves as an important identity proof.</p>
-            <p>Our platform provides a seamless experience for all your PAN card related needs. Whether you're applying for a new PAN, need to correct details, require a reprint, or have lost your card, we've got you covered with simple, secure, and fast processing.</p>
-        </div>
+      <h1>PAN Card Services</h1>
+      <p>Manage your PAN card applications and corrections with ease</p>
     </div>
-    
-    <footer>
-        <div class="container">
-            <p>&copy; 2023 PAN Card Services. All rights reserved.</p>
+  </header>
+
+  <div class="container">
+    <div class="services-grid">
+      <!-- New PAN Card -->
+      <div class="service-card">
+        <div class="card-icon">
+          <i class="fas fa-id-card"></i>
         </div>
-    </footer>
+        <div class="card-content">
+          <h3>New PAN Card</h3>
+          <p>Apply for a brand new Permanent Account Number (PAN) card if you don't have one.</p>
+          <a href="javascript:void(0);" class="btn" onclick="openOverlay('overlayNew')">Apply Now</a>
+        </div>
+      </div>
+
+      <!-- PAN Correction -->
+      <div class="service-card">
+        <div class="card-icon">
+          <i class="fas fa-edit"></i>
+        </div>
+        <div class="card-content">
+          <h3>PAN Correction</h3>
+          <p>Request changes or corrections to your existing PAN card details like name or DOB.</p>
+          <a href="javascript:void(0);" class="btn" onclick="openOverlay('overlayCorrection')">Request Changes</a>
+        </div>
+      </div>
+
+      <!-- PAN Reprint -->
+      <div class="service-card">
+        <div class="card-icon">
+          <i class="fas fa-print"></i>
+        </div>
+        <div class="card-content">
+          <h3>PAN Reprint</h3>
+          <p>Get a reprinted copy of your PAN card if your original is damaged or faded.</p>
+          <a href="#" class="btn">Request Reprint</a>
+        </div>
+      </div>
+
+      <!-- Lost PAN Card -->
+      <div class="service-card">
+        <div class="card-icon">
+          <i class="fas fa-search"></i>
+        </div>
+        <div class="card-content">
+          <h3>Lost PAN Card</h3>
+          <p>Report a lost or stolen PAN card and apply for a duplicate replacement.</p>
+          <a href="#" class="btn">Report & Replace</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="info-section">
+      <h2>About PAN Card Services</h2>
+      <p>The Permanent Account Number (PAN) is a 10-digit alphanumeric identifier issued by the Income Tax Department of India.</p>
+      <p>Our platform provides a seamless experience for all your PAN card related needs. Whether you're applying for a new PAN, need to correct details, require a reprint, or have lost your card — we've got you covered.</p>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="year"></span> PAN Card Services. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Overlay for New PAN -->
+  <div id="overlayNew" class="overlay hidden">
+    <div class="expanded-box">
+      <h2>Choose PAN Application Type</h2>
+      <div class="branch-grid">
+        <div class="branch-card">
+          <div class="card-icon"><i class="fas fa-user"></i></div>
+          <div class="card-content">
+            <h3>Normal PAN</h3>
+            <p>Apply for a standard PAN card for individuals above 18 years of age.</p>
+            <a href="https://yourformlink.com?type=normal" class="btn">Proceed</a>
+          </div>
+        </div>
+        <div class="branch-card">
+          <div class="card-icon"><i class="fas fa-child"></i></div>
+          <div class="card-content">
+            <h3>Minor PAN</h3>
+            <p>Apply for a PAN card for a minor (below 18 years) with parental details.</p>
+            <a href="https://yourformlink.com?type=minor" class="btn">Proceed</a>
+          </div>
+        </div>
+      </div>
+      <button class="close-btn" onclick="closeOverlay('overlayNew')">Close</button>
+    </div>
+  </div>
+
+  <!-- Overlay for PAN Correction -->
+  <div id="overlayCorrection" class="overlay hidden">
+    <div class="expanded-box">
+      <h2>Select Correction Type</h2>
+      <div class="branch-grid">
+        <div class="branch-card">
+          <div class="card-icon"><i class="fas fa-user-edit"></i></div>
+          <div class="card-content">
+            <h3>Name Correction</h3>
+            <p>Correct errors in your name on the PAN card to match official records.</p>
+            <a href="https://yourformlink.com?type=name" class="btn">Proceed</a>
+          </div>
+        </div>
+        <div class="branch-card">
+          <div class="card-icon"><i class="fas fa-calendar-day"></i></div>
+          <div class="card-content">
+            <h3>Date of Birth Correction</h3>
+            <p>Correct your date of birth on the PAN card to reflect accurate info.</p>
+            <a href="https://yourformlink.com?type=dob" class="btn">Proceed</a>
+          </div>
+        </div>
+      </div>
+      <button class="close-btn" onclick="closeOverlay('overlayCorrection')">Close</button>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    function openOverlay(id) {
+      document.getElementById(id).classList.remove('hidden');
+    }
+
+    function closeOverlay(id) {
+      document.getElementById(id).classList.add('hidden');
+    }
+  </script>
 </body>
 </html>
